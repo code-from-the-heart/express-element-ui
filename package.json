@@ -1,8 +1,8 @@
 {
   "name": "express-element-ui",
   "version": "0.1.21",
-  "main": "lib/nhc-common-ui.umd.min.js",
-  "description": "nhc-common-ui Components",
+  "main": "lib/express-element-ui.umd.min.js",
+  "description": "express-element-ui",
   "author": "nhc",
   "private": false,
   "scripts": {
@@ -11,7 +11,7 @@
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "eslint-fix": "eslint --fix --ext .js,.vue src",
-    "lib": "vue-cli-service build --target lib --name nhc-common-ui --dest lib packages/index.js"
+    "lib": "vue-cli-service build --target lib --name express-element-ui --dest lib packages/index.js"
   },
   "dependencies": {
     "core-js": "^3.6.4",

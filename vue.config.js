@@ -9,7 +9,7 @@ process.env.VUE_APP_VERSION = require('./package.json').version
 module.exports = {
   runtimeCompiler: true,
   productionSourceMap: false,
-  publicPath: '/nhc-common-ui/',
+  publicPath: '',
   // src 为 examples
   pages: {
     index: {
