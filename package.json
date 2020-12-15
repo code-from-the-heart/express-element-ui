@@ -5,9 +5,6 @@
   "description": "nhc-common-ui Components",
   "author": "nhc",
   "private": false,
-  "publishConfig": {
-    "registry": "https://github.com/code-from-the-heart/express-element-ui"
-  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
