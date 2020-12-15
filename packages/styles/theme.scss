@@ -1,0 +1,144 @@
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: PingFang SC, Helvetica Neue, Helvetica, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+label {
+  font-weight: 700;
+}
+
+#nhc-portal {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+//main-container全局样式
+.app-main {
+  min-height: 100%
+}
+
+main{ 
+  @include bg-color($--ui-color-white);
+ }
+
+// 表格按钮操作样式
+.nhc-table__btn {
+  position: relative;
+  &.el-button + .el-button {
+    margin-left: 16px;
+  }
+  &::after {
+    content: '';
+    width: 0;
+    height: 12px;
+    border-right: 1px solid $--ui-color-primary;
+    position: absolute;
+    top: 14px;
+    right: -9px;
+  }
+  &.el-button--mini::after {
+    height: 10px;
+    top: 8px;
+  }
+  &.el-button--small::after {
+    height: 11px;
+    top: 10px;
+  }
+  &:last-child::after {
+    border: none;
+  }
+  &:not(.is-disabled) {
+    &.el-button--text {
+      span {
+        color: $--ui-color-primary;
+        &:hover {
+          color: $--ui-color-primary;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  
+  &.el-button--text {
+    &.el-button + .el-button {
+      margin-left: 16px;
+    }
+    span {
+      position: relative;
+      &::after {
+        content: '';
+        width: 0;
+        height: 12px;
+        border-right: 1px solid $--ui-color-primary;
+        position: absolute;
+        top: 2px;
+        right: -9px;
+      }
+    }
+    &.el-button--mini {
+      span::after {
+        height: 10px;
+        top: 2px;
+      }
+    }
+    &.el-button--small {
+      span::after {
+        height: 11px;
+        top: 2px;
+      }
+    }
+  }
+}
+
+

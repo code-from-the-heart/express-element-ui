@@ -1,0 +1,98 @@
+//	全局scss变量，主要定义UI风格设计规范里的颜色
+$--ui-color-primary: #0486FE;					// 用于重要级文字信息，需要特别强调和突出的文字、图标、按钮
+$--ui-color-yellow: #ffd800; 					// 部分面积使用，装饰图标、图表曲线等
+$--ui-color-green: #00ffae; 					// 部分面积使用，图表曲线等
+$--ui-color-red: #ff2787; 						// 部分面积使用，图表曲线等
+$--ui-color-blue: #009cff; 						// 部分面积使用，图表曲线等
+$--ui-color-white: #fff;              // 白色
+$--ui-color-transparent: transparent;   // 默认模板为透明，占位给其他模板
+$--ui-color-success: #00FFAE;         // 默认成功提示色
+$--ui-color-blue-2: #3890EF;          // 部分面积使用
+
+$--ui-color-background: #F2F2F2; 			// 页面模块的背景色
+$--ui-color-main-bg: #000d20;					// 主题页面背景色
+$--ui-color-border: #D9D9D9; 					// 分割线、输入框、边框用色
+$--ui-color-table-stripe: #00102a; 		// 列表斑马纹用色
+$--ui-color-pageborder: #008fa0; 			// 页面模块边框色
+$--ui-color-table-highlight: #16305d; // 列表选中高亮
+$--ui-color-table-sum-bg: rgba(0, 232, 254, 0.05); // 表格汇总背景色
+$--ui-color-menu-open-bg: #000c1f;		 // 导航展开底色
+$--ui-color-dialog-border-top: #173361;		// 弹框分割线上部分用色
+$--ui-color-dialog-border-bottom: #000c1f;		 // 弹框分割线下部分用色
+$--ui-color-scrollbar-bg: #22314b;		         // 滚动条底色
+$--ui-color-scrollbar-thumb: #7186aa;		       // 滚动条滑块用色
+$--ui-color-popover-bg: rgba(41, 59, 91, .95); // popover弹框1
+$--ui-color-tag-success-bg: rgba(0, 255, 174, .2); // el-tag--success底色
+$--ui-color-rate-off: rgba(255, 216, 0, .3);       // el-rate 未选中色彩
+$--ui-color-tabs: #eee;                            // el-tabs背景色
+$--ui-color-tips: #909399;
+$--ui-color-desc: #656262;
+
+//边框
+$--ui-border-color:#D9D9D9;	   	       // 边框线
+
+// 字体颜色
+$--ui-font-title: #ffffff; 						// 标题用色
+$--ui-font-content: #ffffff; 					// 正文用色
+$--ui-font-tips: #92aad2; 						// 辅助次要文字
+$--ui-font-warning: red; 						  // 错误提示或者警告文字
+$--ui-font-default-hover: #b0cbf7;		// 默认按钮悬浮文字用色
+
+// 按钮
+$--ui-btn-primary: #0486FE;						// primary按钮背景色
+$--ui-btn-primary-hover: #012e54;			// primary按钮悬浮背景色
+$--ui-btn-hover: #4b638a;							// 表单项悬浮用色
+$--ui-btn-default-hover: #43597f;			// 默认按钮悬浮边框用色
+$--ui-btn-disabled: #19263f;					// 表单元素disabled用色
+$--ui-form-no-bg: transparent;					// 表单元素浏览状态无背景色
+$--ui-btn-success:#67C23A;            // 成功按钮
+$--ui-btn-warning:#E6A23C;            // 警告按钮
+$--ui-btn-danger:#F56C6C;	            // 危险按钮
+$--ui-btn-active-bg:#E8F4FF !default;	//默认按钮
+$--ui-btn-hover-bg:#EFF7FF !default;
+
+//hover，点击背景色
+$--ui-table-hover:#F6F8FA !default;	    // 表格表行hover背景色
+$--ui-btn-hover:#0486FE !default;		    //整体主色调/菜单栏选中色/按钮hover色/文字按钮hover色/控件hover边框线
+$--ui-btn-click:#0475DF !default;		    //点击色
+$--ui-btn-disabled:#F6F6F6 !default;	  //禁用	
+$--ui-select-hover: #E8E8E8;
+
+// 表格
+$--ui-row-stripe-color: #F5F7FA;
+$--ui-row-hover-color: #F6F6F6;
+$--ui-table-header--bg-color: #ECEEF5;
+$--ui-table-header-color: #666;
+
+// 间距
+$--ui-page-module-margin:0 24px !default;
+$--ui-page-module-padding:0 16px !default; 
+$--ui-page-module-padding16:16px !default; 
+
+// 圆角
+$--ui-btn-border-radius: 0;
+
+//阴影
+$ui-box-shadow: 0 5px 10px 0 rgba(217,217,217,0.30) !default;
+
+// color: nth($fontcolor, 1);   #5A5A5A
+$--ui-color-fontcolor:  
+		#5A5A5A,	//1
+		#262626,	//2
+		#0a0909,	//3
+		#ffffff,	//4
+		#999999,	//5
+		#0486FE,	//6
+		#EFF7FF,	//7
+		#D9D9D9,	//8
+		#606266;	//9	
+  
+//字号
+$--ui-fontsize:
+		12px,	//	1备注文字大小
+		13px,	//	2特定场景使用
+		14px,	//	3默认字号/左导航/顶栏/页签/表格内文字/详情页文字/选项卡
+		16px,	//	4弹出框标题/表格标题
+		18px,	//	5强调标题
+		20px,	//	6板块正标题
+    24px;	//	7板块正标题

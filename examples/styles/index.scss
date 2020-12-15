@@ -1,0 +1,41 @@
+@import './doc-example.scss';
+.nhc-page-module {
+  background-color: white;
+  padding: 10px 15px;
+}
+.nhc-table-list {
+  border-top: 16px solid #F2F2F2;
+}
+
+// 临时重置elementui class
+.el-dialog {
+  .el-dialog__header {
+    background-color: #f0f0f0;
+  }
+}
+
+.flex {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.page-container p {
+  font-size: 14px;
+  color: #5e6d82;
+  line-height: 1.5em;
+}
+
+.el-aside{
+  width: 240px !important;
+}

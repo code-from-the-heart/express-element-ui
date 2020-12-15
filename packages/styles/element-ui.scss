@@ -1,0 +1,413 @@
+// 配置elementUI样式、以及根据规范通用重置部分样式
+
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+/* 改变 路径变量，必需 */
+@import "~element-ui/packages/theme-chalk/src/index";
+
+
+// to reset element-ui default css
+.el-upload {
+  input[type="file"] {
+    display: none ;
+  }
+}
+
+.el-upload__input {
+  display: none;
+}
+
+//暂时性解决diolag 问题 https://github.com/ElemeFE/element/issues/2461
+.el-dialog {
+  transform: none;
+  left: 0;
+  position: relative;
+  margin: 0 auto;
+  .el-dialog__footer{
+	  text-align:center ;
+  }
+}
+
+//element ui upload
+.upload-container {
+  .el-upload {
+    width: 100%;
+
+    .el-upload-dragger {
+      width: 100%;
+      height: 200px;
+    }
+  }
+}
+
+.el-menu--vertical {
+  overflow-y: auto;
+  max-height: 100%;
+}
+
+
+
+//默认按钮
+.el-button{
+		border-radius: $--ui-btn-border-radius;
+		height: 32px ;
+		line-height: 32px ;
+		padding: $--ui-page-module-padding;
+		font-size:nth($--ui-fontsize,3);
+	}
+	.el-button--primary{
+    background:$--ui-btn-primary ;
+    border-color: $--ui-btn-primary;
+  }  
+	.el-button--success{
+    background:$--ui-btn-success ;
+    border-color: $--ui-btn-success;
+  }  
+	.el-button--warning{
+    background:$--ui-btn-warning ;
+    border-color: $--ui-btn-warning;
+  }  
+	.el-button--danger{
+    background:$--ui-btn-danger ;
+    border-color: $--ui-btn-danger;
+  } 
+	.el-button--info{
+    background:nth($--ui-color-fontcolor, 4);
+    border-color: nth($--ui-color-fontcolor, 8);
+    color: nth($--ui-color-fontcolor, 1);
+  } 
+	
+	//朴素按钮
+	.el-button.is-circle {
+	    border-radius: 50%;
+	    padding: 12px;
+	}
+	.el-button--primary.is-plain{
+		color: $--ui-btn-primary ;
+		background: $--ui-color-white ;
+    border-color: $--ui-btn-primary ; 
+	}  
+	.el-button--danger.is-plain{
+		color: $--ui-btn-danger ;
+		background: $--ui-color-white ;
+		border-color: $--ui-btn-danger ;
+	}
+
+	.el-button-group{
+		margin:0 16px 16px 0;
+  }
+  
+	// 表格
+	.el-table {
+     margin-top: 0;
+     th {
+       @include bg-color($--ui-table-header--bg-color);
+       @include color($--ui-table-header-color);
+     }
+     .el-table__fixed-right {
+      // 饿了么的固定块的高度用js动态计算了，这个高度下before伪类会显示在下方，不要往下移，隐藏
+      &::before {
+        bottom: -14px; 
+      }
+    }
+
+		.el-table-column--selection .cell {
+        padding-right:0;
+     }
+		
+		//表头
+		.tableHead{
+			font-weight:400 ;
+			color: nth($--ui-color-fontcolor,2);
+			background: $--ui-table-header--bg-color;
+		}
+		th, td{
+			font-size: nth($--ui-fontsize,3);
+			padding: 10px 0 ;
+			border-bottom: 1px solid $--ui-color-border;
+		}
+		td{
+      color: nth($--ui-color-fontcolor,9);
+    }
+		.el-button{
+      padding: 0;
+    }
+	}
+	.el-table::before{
+    height: 0;
+  } 
+
+	//表格斑马线颜色
+	.el-table--striped .el-table__body tr.el-table__row--striped td{
+		background: $--ui-row-stripe-color;
+	}
+	//表格hover颜色
+	.el-table--enable-row-hover .el-table__body tr:hover > td{
+		background-color:$--ui-row-hover-color;
+	}
+	//表格横向边框线
+	.el-table--enable-row-transition .el-table__body td{	
+		border-bottom: 1px solid $--ui-color-border;
+		padding: 10px 0 ;
+	}
+	
+	//.el-tabs
+	.el-tabs{
+		.el-tabs__header{
+			padding: $--ui-page-module-padding;
+			background: $--ui-font-content;
+			height: 44px;
+		}
+		.el-tabs__content{
+			padding:0;
+			margin-top:0;
+		}
+		//tabs 字号颜色
+		.el-tabs__item.is-active{
+			color:nth($--ui-color-fontcolor,6);
+			font-size: nth($--ui-fontsize, 3);
+		}
+		.el-tabs__item{
+			font-size: nth($--ui-fontsize, 3);
+			color: nth($--ui-color-fontcolor, 1);
+		}	
+	}
+	.el-tabs .el-tabs__item{
+		color: #303133;
+		font-size: nth($--ui-fontsize, 3);
+	}
+	
+	// olap
+	
+	.el-tree-node__content{
+		height: 32px ;; line-height: 32px;
+		.cus-node-content{
+			top: 0;
+		}
+	}
+	.el-tree-node__content:hover{
+    background: $--ui-btn-hover-bg;
+  }
+	.cus-box .cus-left{
+    padding: 0 ;
+    background: $--ui-color-white;
+  }
+	.cus-box .cus-right{
+    margin-left: 16px;
+  }
+	
+	.el-row{
+    margin-top: 0;
+  }
+	.folderAside .custom-tree-node .cus-node-title{	
+		font-size: nth($--ui-fontsize, 3);
+		color: nth($--ui-color-fontcolor, 2);
+  }
+  
+	//olap 个别页面加头
+	.folderAside{
+		box-shadow: 5px 0 10px 0 rgba(0,0,0,0.05);
+		padding: 16px;
+		width:240px ;
+		margin-right:0;
+		.left-search{padding: 0 ;}
+		.el-tree{padding: 16px 0;margin-bottom: 16px;}
+	}
+	.el-aside{
+		width: 200px;
+		.el-tabs__content{
+			.folderAside{
+				padding: 16px;
+				width:100% ;
+				margin-right:0;
+				padding: 0;
+				.left-search{
+					padding: 0;
+				}
+				.el-tree{
+					padding: 16px 0;
+				}
+			}
+		}
+	}
+  //olap	结束	
+  
+	//分页
+	.ele-pagination{
+	    margin-top: 0;
+	    padding: 0 16px 16px 16px;
+		  background: $--ui-color-white;
+		
+		.el-pagination.is-background .btn-next, .el-pagination.is-background .btn-prev, .el-pagination.is-background .el-pager li{
+			background-color: transparent ;
+		}
+		.active{color:nth($--ui-color-fontcolor,6);}
+	}
+	
+	//表单
+	.el-form{
+		background: nth($--ui-color-fontcolor,4);
+		padding: $--ui-page-module-padding16;
+		margin-bottom:0;
+		// .el-form-item,.el-form-item--small{margin-bottom: 0;}
+		.el-form-item__label{
+			font-size: nth($--ui-fontsize,3);
+			color: nth($--ui-color-fontcolor,3);
+			font-weight: normal;
+		}
+		.line {text-align: center;}
+		.el-input__inner,.el-textarea__inner,.el-select-dropdown{
+      border-radius: $--ui-btn-border-radius ;
+    }
+
+		.ele-pagination{
+			.el-form-item,.el-form-item--small {
+			margin-bottom: 0 ;
+			}
+		}
+		.el-button-group{
+			padding: 16px 16px 24px 0 ;
+			margin-bottom :0;
+		}
+	}
+	.el-autocomplete-suggestion{
+    border-radius:$--ui-btn-border-radius ;
+    z-index: 3501;}
+
+	.el-input--small .el-input__inner,.el-dropdown-menu--small .el-dropdown-menu__item{
+    font-size:14px ;
+  }
+	.el-select .el-input .el-select__caret{
+	  margin-top:0;
+	}
+	.el-card{
+		margin-top: 16px;
+		color: #444444 ;
+		.el-card__header{
+			padding:0 16px ;
+		    height: 50px;
+		    line-height: 50px;
+		}
+		.el-card__body{
+      padding: 16px;
+    }
+  }
+  
+
+	// 日期
+	.el-picker-panel{
+		.el-date-picker__header-label,.el-date-table,.el-picker-panel,.el-date-table th{
+      font-size: nth($--ui-fontsize,3);
+      color: nth($--ui-color-fontcolor,2);
+		}
+		.el-date-table td.today span,td.current span{
+			background: #FFBA0F;
+			color: nth($--ui-color-fontcolor,4);
+			border-radius:$--ui-btn-border-radius ;
+		}
+		.el-date-table td span:hover{
+			background: nth($--ui-color-fontcolor,7);
+			color: nth($--ui-color-fontcolor,2);
+			border-radius:$--ui-btn-border-radius ;
+		}
+		.el-date-table td.prev-month {
+		    font-size: nth($--ui-fontsize,3);
+		    color: nth($--ui-color-fontcolor,8);
+		}
+  }
+  
+
+	//无圆角
+	.el-input__inner,.el-textarea__inner,.el-select-dropdown,.el-message,
+	.el-message-box,.el-input-group__append{
+    border-radius: $--ui-btn-border-radius ;
+  }
+	
+	//弹窗
+	.el-message-box{
+    padding-bottom: 0;
+    width: 360px ;}
+	//icon
+	.el-message-box__status{
+    display: none;
+  }
+	// 头
+	.el-message-box__title{
+		font-size: nth($--ui-fontsize,4);
+		color:  nth($--ui-color-fontcolor,2);
+	}
+	.el-dialog__body{
+	  div{
+	    border-radius:0;
+	  }
+	}
+	
+	.el-message-box__content,.el-message-box__btns{
+    text-align: center ;
+  }
+		// 边距
+	.el-message-box__content,.el-message-box__btns{
+		padding: 16px;
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: center;
+		align-items: center;
+		.el-button {
+			margin: 0 10px;
+		}
+	}
+	
+	// 自定义弹窗
+	.custom_dialog .el-message-box__message{
+    padding:0;
+  }
+	.custom_dialog .el-message-box__btns{
+	  position: relative;
+	}
+	.custom_dialog .el-message-box__content{
+	  margin-bottom: 16px;
+	}
+	.custom_dialog .btn_cancel{
+		position: absolute;
+		left: 185px;
+		bottom: 16px;
+		background: $--ui-color-white;
+		border: 1px solid $--ui-color-primary;
+		color: $--ui-color-primary;
+	}
+	.custom_dialog .btn_confirm{
+		position: absolute;
+		right: 185px;
+		bottom: 16px;
+		left: auto;
+	}
+	
+// option select下拉
+.el-select-dropdown__item.hover, .el-select-dropdown__item:hover,.el-autocomplete-suggestion li:hover{
+	background-color: $--ui-select-hover;
+	color:nth($--ui-color-fontcolor,6)
+}
+.el-select-dropdown__item{
+	color:nth($--ui-color-fontcolor,1);
+}
+.el-select-dropdown__item.selected{
+	font-weight: normal ;
+}
+.el-button--text {
+  color: $--ui-color-primary;
+  &:hover {
+    color: $--ui-color-primary;
+  }
+}
+// 查询区域样式重置
+.nhc-search-wrapper {
+  .nhc-search-item {
+    width: 100%;
+  }
+}
+
+// 日期范围
+.el-date-editor .el-range-separator {
+  width: 7%;
+}
